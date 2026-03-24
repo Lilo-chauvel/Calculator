@@ -27,8 +27,7 @@ public class CalculatorTest {
         assertEquals(0, calculator.addition(0,0));
     }
 
-    //TESTS SUBSTRATION
-
+    //TESTS SUBSTRACT
     @Test
     public void testSubstractionTwoPositif(){
         assertEquals(-1, calculator.substract(2,3));
@@ -49,5 +48,28 @@ public class CalculatorTest {
     public void testSubstractionTwoZero(){
         assertEquals(0, calculator.substract(0,0));
     }
+
+    //TEST MULTIPLY
+    @Test
+    public void testMultiplyTwoPositive(){
+        assertEquals(6,calculator.multiply(2,3));
+    }
+    @Test
+    public void testMultiplyTwoNegative(){
+        assertEquals(6,calculator.multiply(-2,-3));
+    }
+    @Test
+    public void testMultiplyPositiveAndNegative(){
+        assertEquals(-6,calculator.multiply(-2,3));
+    }
+    @Test
+    public void testMultiplyWithZero(){
+        assertEquals(0,calculator.multiply(0,2));
+    }
+    @Test
+    public void testMultiplyByOne(){
+        assertEquals(6,calculator.multiply(6,1));
+    }
+
 }
 
