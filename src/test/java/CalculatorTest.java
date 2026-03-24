@@ -11,11 +11,11 @@ public class CalculatorTest {
         assertEquals(5, calculator.addition(2,3));
     }
     @Test
-    public void testAdditionTwoNegatif(){
+    public void testAdditionTwoNegative(){
         assertEquals(-5, calculator.addition(-2,-3));
     }
     @Test
-    public void testAdditionPositifAndNegatif(){
+    public void testAdditionPositifAndNegative(){
         assertEquals(-1, calculator.addition(2,-3));
         assertEquals(1, calculator.addition(-2,3));
     }
@@ -28,78 +28,78 @@ public class CalculatorTest {
         assertEquals(0, calculator.addition(0,0));
     }
 
-    //TESTS SUBSTRACT
+    //TESTS SUBSTRACTION
     @Test
     public void testSubstractionTwoPositif(){
-        assertEquals(-1, calculator.substract(2,3));
+        assertEquals(-1, calculator.subtraction(2,3));
     }
     @Test
-    public void testSubstractionTwoNegatif(){
-        assertEquals(1, calculator.substract(-2,-3));
+    public void testSubstractionTwoNegative(){
+        assertEquals(1, calculator.subtraction(-2,-3));
     }
     @Test
-    public void testSubstractionPositifAndNegatif(){
-        assertEquals(5, calculator.substract(2,-3));
-        assertEquals(-5, calculator.substract(-2,3));
+    public void testSubstractionPositifAndNegative(){
+        assertEquals(5, calculator.subtraction(2,-3));
+        assertEquals(-5, calculator.subtraction(-2,3));
     }
     @Test
     public void testSubstractionWithZero(){
-        assertEquals(-2, calculator.substract(0,2));
+        assertEquals(-2, calculator.subtraction(0,2));
     }
     @Test
     public void testSubstractionTwoZero(){
-        assertEquals(0, calculator.substract(0,0));
+        assertEquals(0, calculator.subtraction(0,0));
     }
 
-    //TESTS MULTIPLY
+    //TESTS MULTIPLICATION
     @Test
-    public void testMultiplyTwoPositive(){
-        assertEquals(6,calculator.multiply(2,3));
+    public void testMultiplicationTwoPositive(){
+        assertEquals(6,calculator.multiplication(2,3));
     }
     @Test
-    public void testMultiplyTwoNegative(){
-        assertEquals(6,calculator.multiply(-2,-3));
+    public void testMultiplicationTwoNegative(){
+        assertEquals(6,calculator.multiplication(-2,-3));
     }
     @Test
-    public void testMultiplyPositiveAndNegative(){
-        assertEquals(-6,calculator.multiply(-2,3));
-        assertEquals(-6,calculator.multiply(2,-3));
+    public void testMultiplicationPositiveAndNegative(){
+        assertEquals(-6,calculator.multiplication(-2,3));
+        assertEquals(-6,calculator.multiplication(2,-3));
     }
     @Test
-    public void testMultiplyWithZero(){
-        assertEquals(0,calculator.multiply(0,2));
+    public void testMultiplicationWithZero(){
+        assertEquals(0,calculator.multiplication(0,2));
     }
     @Test
-    public void testMultiplyByOne(){
-        assertEquals(6,calculator.multiply(6,1));
+    public void testMultiplicationByOne(){
+        assertEquals(6,calculator.multiplication(6,1));
     }
 
-    //TESTS DIVIDE
+    //TESTS DIVISION
     @Test
-    public void testDeviveTwoPositive() throws ExceptionDivideByZero {
-        assertEquals(2, calculator.divide(4,2));
+    public void testDivisionTwoPositive() throws ExceptionDivideByZero {
+        assertEquals(2, calculator.division(4,2));
     }
     @Test
-    public void testDeviveTowNegative() throws ExceptionDivideByZero {
-        assertEquals(2,calculator.divide(-4,-2));
+    public void testDivisionTowNegative() throws ExceptionDivideByZero {
+        assertEquals(2,calculator.division(-4,-2));
     }
     @Test
-    public void testDevivePositiveAndNegative() throws ExceptionDivideByZero {
-        assertEquals(-2,calculator.divide(4,-2));
-        assertEquals(-2,calculator.divide(-4,2));
+    public void testDivisionPositiveAndNegative() throws ExceptionDivideByZero {
+        assertEquals(-2,calculator.division(4,-2));
+        assertEquals(-2,calculator.division(-4,2));
     }
     @Test
-    public void testDeviveWithZero(){
-        assertThrows(ExceptionDivideByZero.class, ()->calculator.divide(5,0));
+    public void testDivisionWithZero(){
+        assertThrows(ExceptionDivideByZero.class, ()->calculator.division(5,0));
     }
     @Test
-    public void testDivideZeroByNumber() throws ExceptionDivideByZero {
-        assertEquals(0,calculator.divide(0,10));
+    public void testDivisionZeroByNumber() throws ExceptionDivideByZero {
+        assertEquals(0,calculator.division(0,10));
     }
     @Test
-    public void testDivideByOne() throws ExceptionDivideByZero {
-        assertEquals(5, calculator.divide(5,1));
-        assertEquals(10, calculator.divide(10,1));
+    public void testDivisionByOne() throws ExceptionDivideByZero {
+        assertEquals(5, calculator.division(5,1));
+        assertEquals(10, calculator.division(10,1));
     }
 }
 
